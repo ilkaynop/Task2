@@ -1,0 +1,46 @@
+﻿@model AuthorModel
+
+<div class="panel-group">
+    @await Component.InvokeAsync("AdminWidget", new { widgetZone = "admin_author_details_info_top", additionalData = Model.Id })
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="FirstName" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="FirstName" asp-required="true" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="LastName" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="LastName" asp-required="true" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="Description" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="Description" asp-template="RichEditor" />
+                    <span asp-validation-for="Description"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-label asp-for="PictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="PictureId" />
+                    <span asp-validation-for="PictureId"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    @await Component.InvokeAsync("AdminWidget", new { widgetZone = "admin_author_details_info_bottom", additionalData = Model.Id })
+</div>

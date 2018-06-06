@@ -1,0 +1,25 @@
+﻿@model IList<AuthorBriefInfoModel>
+@if (Model.Count > 0)
+{
+    <div class="authors">
+        @if (Model.Count == 1)
+        {
+            <span class="label">@T("Products.Author"):</span>
+        }
+        else
+        {
+            <span class="label">@T("Products.Authors"):</span>
+        }
+        <span class="value">
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                var item = Model[i];
+                <a href="@Url.RouteUrl("Author", new { SeName = item.SeName })">@item.FirstName @item.LastName</a>
+                if (i != Model.Count - 1)
+                {
+                    <span class="separator">,</span>
+                }
+            }
+        </span>
+    </div>
+}

@@ -1,0 +1,25 @@
+﻿@model AuthorNavigationModel
+@if (Model.Authors.Count > 0)
+{
+    <div class="block block-author-navigation">
+        <div class="title">
+            <strong>@T("Authors")</strong>
+        </div>
+        <div class="listbox">
+            <ul class="list">
+                @foreach (var author in Model.Authors)
+                {
+                    <li class="@(author.IsActive ? "active" : "inactive")">
+                        <a href="@Url.RouteUrl("Author", new { SeName = author.SeName })">@author.FirstName @author.LastName</a>
+                    </li>
+                }
+            </ul>
+            @if (Model.TotalAuthors > Model.Authors.Count)
+            {
+                <div class="view-all">
+                    <a href="@Url.RouteUrl("AuthorList")">@T("Authors.ViewAll")</a>
+                </div>
+            }
+        </div>
+    </div>
+}

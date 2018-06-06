@@ -1,0 +1,5 @@
+{
+  "DataProvider": "sqlserver",
+  "DataConnectionString": "Data Source=localhost\\SQLExpress;Initial Catalog=nop4DB;Integrated Security=False;Persist Security Info=False;User ID=nop4;Password=nop4",
+  "RawDataSettings": {}
+}
