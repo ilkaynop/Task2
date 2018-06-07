@@ -1,0 +1,15 @@
+﻿@model Nop.Plugin.Widgets.MyProductMessage.Models.PublicInfoModel
+@{
+    Layout = "";
+    Html.AppendCssFileParts("~/Plugins/Widgets.MyProductMessage/Content/styles.css");
+
+}
+@using Nop.Web.Framework.UI
+
+@foreach (var embedMessage in Model.EmbedMessageRecordModels)
+{
+<div class="message-holder">
+    @embedMessage.MessageHtmlCode
+</div>
+
+}

@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Add Message with Product",
+  "SystemName": "Ayas.MyProductMessage",
+  "Version": "1.83",
+  "SupportedVersions": [ "4.00" ],
+  "Author": "ilkay ayas",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.MyProductMessage.dll",
+  "Description": "This plugin displays a message on the product details page in public store (e.g. “50% discount in December”). And this message is editable in admin area on the widget configuration page."
+}
+
